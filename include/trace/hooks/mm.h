@@ -399,5 +399,6 @@ DECLARE_HOOK(android_vh_shmem_swapin_page,
 #endif /* _TRACE_HOOK_MM_H */
 
 /* This part must be outside protection */
+#include <trace/define_trace.h>
 
 #endif /* PROTECT_TRACE_INCLUDE_PATH */
