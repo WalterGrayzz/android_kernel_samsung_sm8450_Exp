@@ -5,7 +5,7 @@ LLVM=1
 DEPMOD=depmod
 DTC=dtc
 CLANG_PREBUILT_BIN=prebuilts/llvm-22.1.0-rc2-x86_64/bin
-BUILDTOOLS_PREBUILT_BIN=build/build-tools/path/linux-x86
+# BUILDTOOLS_PREBUILT_BIN=build/build-tools/path/linux-x86
 
 KCFLAGS="${KCFLAGS} -D__ANDROID_COMMON_KERNEL__"
 EXTRA_CMDS=''
