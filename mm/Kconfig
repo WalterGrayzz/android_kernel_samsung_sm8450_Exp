@@ -897,5 +897,6 @@ config MAPPING_DIRTY_HELPERS
         bool
 
 source "mm/damon/Kconfig"
+source "mm/sec_mm/Kconfig"
 
 endmenu
