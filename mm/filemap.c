@@ -2676,11 +2676,7 @@ static inline void filemap_tracing_mark_begin(struct file *file,
 static inline void filemap_tracing_mark_end(void) { }
 #endif
 
-#if CONFIG_MMAP_READAROUND_LIMIT == 0
-unsigned int mmap_readaround_limit = VM_READAHEAD_PAGES;
-#else
-unsigned int mmap_readaround_limit = CONFIG_MMAP_READAROUND_LIMIT;	/* page */
-#endif
+unsigned int mmap_readaround_limit = 16;
 
 /*
  * Synchronous readahead happens when we don't even find a page in the page
