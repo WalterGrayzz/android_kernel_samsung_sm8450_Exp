@@ -7048,6 +7048,7 @@ static void kswapd_try_to_sleep(pg_data_t *pgdat, int alloc_order, int reclaim_o
 	finish_wait(&pgdat->kswapd_wait, &wait);
 }
 
+#define CONFIG_KSWAPD_CPU 0x7F
 #if CONFIG_KSWAPD_CPU
 static struct cpumask kswapd_cpumask;
 
@@ -7126,6 +7127,7 @@ static int kswapd(void *p)
 	unsigned int highest_zoneidx = MAX_NR_ZONES - 1;
 	pg_data_t *pgdat = (pg_data_t*)p;
 	struct task_struct *tsk = current;
+#define CONFIG_KSWAPD_CPU 0x7F
 #if CONFIG_KSWAPD_CPU
 	const struct cpumask *cpumask = &kswapd_cpumask;
 #else
@@ -7384,6 +7386,7 @@ static int __init kswapd_init(void)
 {
 	int nid;
 
+#define CONFIG_KSWAPD_CPU 0x7F
 #if CONFIG_KSWAPD_CPU
 	init_kswapd_cpumask();
 #endif
